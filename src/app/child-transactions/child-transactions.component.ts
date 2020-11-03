@@ -3,7 +3,7 @@ import { ColumnMode } from '@swimlane/ngx-datatable';
 import { TransactionsService } from '../transactions.service';
 import { HttpClient } from '@angular/common/http';
 import { Page } from '../model/page';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-child-transactions',
