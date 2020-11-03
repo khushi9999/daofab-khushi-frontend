@@ -1,0 +1,62 @@
+<div>
+    <h3 class="title">
+        DAOFAB Parent Transactions
+    </h3>
+    <!-- <ngx-datatable class="material" [rows]="rows" [externalPaging]="true" [count]="page.totalElements" [offset]="page.pageNumber" [limit]="page.size" (page)="setPage($event)">
+    </ngx-datatable> -->
+    <ngx-datatable
+            class="material"
+            [rows]="rows"
+            [columns]="columns"
+            [columnMode]="ColumnMode.force"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            rowHeight="auto"
+            [externalPaging]="true"
+            [count]="page.totalElements"
+            [offset]="page.pageNumber"
+            [limit]="page.size"
+            (page)="setPage($event)"
+    >
+        <ngx-datatable-column name="id" [width]='100'>
+            <ng-template ngx-datatable-header-template>
+                <span>Id</span>
+            </ng-template>
+            <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+                <span>{{ value }}</span>
+            </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="sender" [width]='100'>
+            <ng-template ngx-datatable-header-template>
+                <span>Sender</span>
+            </ng-template>
+            <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+                <span>{{ value }}</span>
+            </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="receiver" [width]='100'>
+            <ng-template ngx-datatable-header-template>
+                <span>Receiver</span>
+            </ng-template>
+            <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+                <span>{{ value }}</span>
+            </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="totalAmount" [width]='100'>
+            <ng-template ngx-datatable-header-template>
+                <span>Total Amount</span>
+            </ng-template>
+            <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+                <span>{{ value }}</span>
+            </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="paidAmount" [width]='100'>
+            <ng-template ngx-datatable-header-template>
+                <span>Paid Amount</span>
+            </ng-template>
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                <p class="action-btn" style="cursor: pointer;color: blue" (click)="callChild(row)">{{value}}</p>
+            </ng-template>
+        </ngx-datatable-column>
+    </ngx-datatable>
+</div>
