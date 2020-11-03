@@ -1,0 +1,49 @@
+<div>
+    <h3 class="home" (click)="home()">
+        HOME
+    </h3>
+    <h3 class="title">
+        DAOFAB Child Transactions
+    </h3>
+    <!-- <ngx-datatable class="material" [rows]="rows" [externalPaging]="true" [count]="page.totalElements" [offset]="page.pageNumber" [limit]="page.size" (page)="setPage($event)">
+    </ngx-datatable> -->
+    <ngx-datatable class="material"
+                   [rows]="rows"
+                   [columns]="columns"
+                   [columnMode]="ColumnMode.force"
+                   [headerHeight]="50"
+                   [footerHeight]="50"
+                   rowHeight="auto"
+                   [externalPaging]="true"
+                   [count]="page.totalElements"
+                   [offset]="page.pageNumber"
+                   [limit]="page.size"
+                   (page)="setPage($event)">
+
+        <ngx-datatable-column name="id" [width]='100'>
+            <ng-template ngx-datatable-header-template>
+                <span>Id</span>
+            </ng-template>
+            <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+                <span>{{ value }}</span>
+            </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="parentId" [width]='100'>
+            <ng-template ngx-datatable-header-template>
+                <span>Parent Id</span>
+            </ng-template>
+            <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+                <span>{{ value }}</span>
+            </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="paidAmount" [width]='100'>
+            <ng-template ngx-datatable-header-template>
+                <span>Paid Amount</span>
+            </ng-template>
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                <span>{{value}}</span>
+            </ng-template>
+        </ngx-datatable-column>
+    </ngx-datatable>
+
+</div>

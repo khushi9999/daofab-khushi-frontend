@@ -1,0 +1,27 @@
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/themes/material.css';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
+
+.ngx-datatable {
+    background: #e6e6e6;
+    padding: 21px;
+}
+
+.ngx-datatable.fixed-header .datatable-header .datatable-header-inner {
+    color: #ff500d;
+}
+
+.title {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 50px;
+}
+
+.home {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: blue;
+    cursor: pointer;
+}
